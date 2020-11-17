@@ -8,27 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		A12B6E7B2560598D00FBDBDE /* CalculatorSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12B6E7A2560598D00FBDBDE /* CalculatorSwiftUIApp.swift */; };
-		A12B6E7D2560598D00FBDBDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12B6E7C2560598D00FBDBDE /* ContentView.swift */; };
 		A12B6E7F2560599000FBDBDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12B6E7E2560599000FBDBDE /* Assets.xcassets */; };
 		A12B6E822560599000FBDBDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12B6E812560599000FBDBDE /* Preview Assets.xcassets */; };
-		A12B6E842560599000FBDBDE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12B6E832560599000FBDBDE /* Persistence.swift */; };
-		A12B6E872560599000FBDBDE /* CalculatorSwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A12B6E852560599000FBDBDE /* CalculatorSwiftUI.xcdatamodeld */; };
+		A12B6E842560599000FBDBDE /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12B6E832560599000FBDBDE /* PersistentStore.swift */; };
 		A12B6E9025605FEE00FBDBDE /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12B6E8F25605FEE00FBDBDE /* CalculatorView.swift */; };
 		A12B6E9325612BD900FBDBDE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12B6E9225612BD900FBDBDE /* Extensions.swift */; };
+		A14124CE2564745600F6A3FB /* ExpressionListSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14124CD2564745600F6A3FB /* ExpressionListSheet.swift */; };
+		A14124D3256477E900F6A3FB /* Expression+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14124D2256477E900F6A3FB /* Expression+Extensions.swift */; };
+		A14124D725647C8900F6A3FB /* ExpressionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14124D625647C8900F6A3FB /* ExpressionViewModel.swift */; };
+		A153AE3A256468110041D784 /* CalculatorSwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A153AE38256468110041D784 /* CalculatorSwiftUI.xcdatamodeld */; };
 		A17C48912563DD6A004B6C12 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17C48902563DD6A004B6C12 /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A12B6E772560598D00FBDBDE /* CalculatorSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12B6E7A2560598D00FBDBDE /* CalculatorSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSwiftUIApp.swift; sourceTree = "<group>"; };
-		A12B6E7C2560598D00FBDBDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A12B6E7E2560599000FBDBDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A12B6E812560599000FBDBDE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A12B6E832560599000FBDBDE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		A12B6E862560599000FBDBDE /* CalculatorSwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalculatorSwiftUI.xcdatamodel; sourceTree = "<group>"; };
+		A12B6E832560599000FBDBDE /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		A12B6E882560599000FBDBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A12B6E8F25605FEE00FBDBDE /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		A12B6E9225612BD900FBDBDE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A14124CD2564745600F6A3FB /* ExpressionListSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionListSheet.swift; sourceTree = "<group>"; };
+		A14124D2256477E900F6A3FB /* Expression+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expression+Extensions.swift"; sourceTree = "<group>"; };
+		A14124D625647C8900F6A3FB /* ExpressionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionViewModel.swift; sourceTree = "<group>"; };
+		A153AE39256468110041D784 /* CalculatorSwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalculatorSwiftUI.xcdatamodel; sourceTree = "<group>"; };
 		A17C48902563DD6A004B6C12 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,14 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				A12B6E7A2560598D00FBDBDE /* CalculatorSwiftUIApp.swift */,
-				A12B6E7C2560598D00FBDBDE /* ContentView.swift */,
 				A12B6E8F25605FEE00FBDBDE /* CalculatorView.swift */,
 				A17C48902563DD6A004B6C12 /* CalculatorBrain.swift */,
 				A12B6E9225612BD900FBDBDE /* Extensions.swift */,
 				A12B6E7E2560599000FBDBDE /* Assets.xcassets */,
-				A12B6E832560599000FBDBDE /* Persistence.swift */,
+				A14124CD2564745600F6A3FB /* ExpressionListSheet.swift */,
+				A14124D625647C8900F6A3FB /* ExpressionViewModel.swift */,
+				A14124D1256477D600F6A3FB /* CoreData */,
 				A12B6E882560599000FBDBDE /* Info.plist */,
-				A12B6E852560599000FBDBDE /* CalculatorSwiftUI.xcdatamodeld */,
 				A12B6E802560599000FBDBDE /* Preview Content */,
 			);
 			path = CalculatorSwiftUI;
@@ -82,6 +86,16 @@
 				A12B6E812560599000FBDBDE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A14124D1256477D600F6A3FB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A153AE38256468110041D784 /* CalculatorSwiftUI.xcdatamodeld */,
+				A12B6E832560599000FBDBDE /* PersistentStore.swift */,
+				A14124D2256477E900F6A3FB /* Expression+Extensions.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,13 +167,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14124D725647C8900F6A3FB /* ExpressionViewModel.swift in Sources */,
 				A17C48912563DD6A004B6C12 /* CalculatorBrain.swift in Sources */,
-				A12B6E842560599000FBDBDE /* Persistence.swift in Sources */,
+				A14124CE2564745600F6A3FB /* ExpressionListSheet.swift in Sources */,
+				A14124D3256477E900F6A3FB /* Expression+Extensions.swift in Sources */,
+				A12B6E842560599000FBDBDE /* PersistentStore.swift in Sources */,
+				A153AE3A256468110041D784 /* CalculatorSwiftUI.xcdatamodeld in Sources */,
 				A12B6E9325612BD900FBDBDE /* Extensions.swift in Sources */,
 				A12B6E9025605FEE00FBDBDE /* CalculatorView.swift in Sources */,
-				A12B6E7D2560598D00FBDBDE /* ContentView.swift in Sources */,
 				A12B6E7B2560598D00FBDBDE /* CalculatorSwiftUIApp.swift in Sources */,
-				A12B6E872560599000FBDBDE /* CalculatorSwiftUI.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,12 +366,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A12B6E852560599000FBDBDE /* CalculatorSwiftUI.xcdatamodeld */ = {
+		A153AE38256468110041D784 /* CalculatorSwiftUI.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A12B6E862560599000FBDBDE /* CalculatorSwiftUI.xcdatamodel */,
+				A153AE39256468110041D784 /* CalculatorSwiftUI.xcdatamodel */,
 			);
-			currentVersion = A12B6E862560599000FBDBDE /* CalculatorSwiftUI.xcdatamodel */;
+			currentVersion = A153AE39256468110041D784 /* CalculatorSwiftUI.xcdatamodel */;
 			path = CalculatorSwiftUI.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

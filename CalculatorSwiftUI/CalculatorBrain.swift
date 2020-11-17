@@ -13,6 +13,19 @@ class CalculatorBrain: ObservableObject {
     @Published var expression: Array<String> = []
     @Published var expressionResult: String = ""
     
+    
+    func joinExpression(expression: Array<String>) -> String {
+        var result = ""
+        for sym in expression {
+            if charArray.contains(sym) {
+                result += " " + sym + " "
+            } else {
+                result += sym
+            }
+        }
+        return result
+    }
+    
     func plusMinusSign() {
         guard expression.count != 0 else { return }
         
@@ -51,6 +64,7 @@ class CalculatorBrain: ObservableObject {
     }
     
     func buttonTapped(_ button: String) {
+        
         if expressionResult != "" {
             expression = expressionResult.map({ String($0) })
             expressionResult = ""
@@ -94,6 +108,8 @@ class CalculatorBrain: ObservableObject {
     func calculateWithPriority() {
         guard expression.count != 0 else { return }
         
+        let expressionString = joinExpression(expression: expression)
+        
         var number = ""
         var calcArray: Array<String> = []
         
@@ -117,7 +133,7 @@ class CalculatorBrain: ObservableObject {
             
         }
         calcArray.append(number)
-        print(calcArray)
+        //        print(calcArray)
         
         func removeFromArray(_ index: Int, action: String) {
             calcArray[index] = performAction(calcArray[index - 1], action, secondNumber: calcArray[index + 1])
@@ -129,7 +145,7 @@ class CalculatorBrain: ObservableObject {
             guard let indexOfPow = calcArray.firstIndex(of: "^") else { break }
             removeFromArray(indexOfPow, action: "^")
         }
-
+        
         while true {
             guard let indexOfMultiply = calcArray.firstIndex(of: "×") else {
                 guard let indexOfDivision = calcArray.firstIndex(of: "/") else { break }
@@ -154,9 +170,12 @@ class CalculatorBrain: ObservableObject {
                 calcArray[index + 1] = performAction(calcArray[index - 1], element, secondNumber: calcArray[index + 1])
             }
         }
-        //        print(calcArray)
-        guard let result = calcArray.last?.clean else { return }
+        
+        guard let result = calcArray.last?.trunc(maximumFractionDigits: 4) else { return }
         expressionResult = result
+        
+        
+        let _ = Expression.addNewExpression(expression: expressionString, answer: result)
     }
     
     private func performAction(_ firstNumber: String, _ action: String, secondNumber: String) -> String {

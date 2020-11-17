@@ -5,12 +5,13 @@
 //  Created by Kirill Fedin on 14.11.2020.
 //
 
-// TODO: Добавить сохранение решений
 
 import SwiftUI
+import CoreData
 
 struct CalculatorView: View {
     @Environment(\.colorScheme) var colorScheme
+    @State private var showSheet = false
     
     private let columns = [
         GridItem(.flexible()),
@@ -28,18 +29,6 @@ struct CalculatorView: View {
         "1", "2", "3", "+",
         ".", "0", "←", "="
     ]
-    
-    private func joinExpression(expression: Array<String>) -> String {
-        var result = ""
-        for sym in expression {
-            if calcBrain.charArray.contains(sym) {
-                result += " " + sym + " "
-            } else {
-                result += sym
-            }
-        }
-        return result
-    }
     
     private func getColor(_ button: String) -> Color {
         switch button {
@@ -61,25 +50,50 @@ struct CalculatorView: View {
         }
     }
     
+    private func getFontSize(_ isResult: Bool = false) -> CGFloat {
+        if isResult {
+            // top text
+            return CGFloat(80 - calcBrain.expression.count * 3 / 2)
+        } else {
+            // bottom text
+            return CGFloat(50 - CGFloat(calcBrain.expression.count))
+        }
+    }
+    
     var body: some View {
         VStack {
+            HStack {
+                Spacer()
+                Button(action: {
+                    showSheet.toggle()
+                }, label: {
+                    Image(systemName: "list.dash")
+                        .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                })
+                .padding(.trailing, 20)
+                .sheet(isPresented: $showSheet, content: {
+                    ExpressionListSheet()
+                })
+            }
+            
             Spacer()
             
             VStack {
                 HStack {
                     Spacer(minLength: 0)
-                    
+
                     if calcBrain.expressionResult != "" {
                         Text(calcBrain.expressionResult)
                             .multilineTextAlignment(.trailing)
-                            .font(.system(size: 80))
+                            .font(.system(size: getFontSize(true)))
                     }
                 }
                 .padding(.bottom, 20)
+                
                 HStack {
                     Spacer(minLength: 0)
-                    Text(joinExpression(expression: calcBrain.expression))
-                        .font(.system(size: 50))
+                    Text(calcBrain.joinExpression(expression: calcBrain.expression))
+                        .font(.system(size: getFontSize()))
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color.newPurple)
                         .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local).onEnded({ (value) in
@@ -112,7 +126,6 @@ struct CalculatorView: View {
                 
             }
         }
-        
         .background(colorScheme == .dark ? Color.black.ignoresSafeArea() : Color.white.ignoresSafeArea())
         
     }
